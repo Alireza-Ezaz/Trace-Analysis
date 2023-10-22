@@ -75,6 +75,18 @@ print("*****************************************************")
 print(f"Number of system calls: {len(system_call_durations)}")
 print("*****************************************************")
 print()
+
+# Find the names of system calls in Cluster 3
+cluster_number = 2  # Assuming Cluster 3 is labeled as 2
+indices_in_cluster_3 = np.where(labels == cluster_number)
+
+print("System calls in Cluster 3:")
+for index in indices_in_cluster_3[0]:
+    syscall_name, _ = system_call_durations[index]
+    print(syscall_name)
+
+print("*****************************************************")
+print(f"Number of system calls: {len(system_call_durations)}")
 # The results of your K-Means clustering indicate that the system call durations have been grouped into three clusters.
 # Let's interpret the results:
 #
