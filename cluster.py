@@ -57,6 +57,7 @@ durations = [duration for name, duration in system_call_durations]
 X = np.array(durations).reshape(-1, 1)
 
 # Apply K-Means clustering
+# https://www.youtube.com/watch?v=4b5d3muPQmA
 K = 3  # Define the number of clusters (you can adjust this)
 kmeans = KMeans(n_clusters=K, random_state=0).fit(X)
 labels = kmeans.labels_
