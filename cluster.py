@@ -5,7 +5,7 @@ import bt2
 system_calls = []
 
 # Create a trace collection message iterator from our lttng trace using babeltrace2.
-message_iterator = bt2.TraceCollectionMessageIterator("venv/traces/kernel")
+message_iterator = bt2.TraceCollectionMessageIterator("traces/kernel")
 
 entry_timestamps = {}
 system_call_durations = []
